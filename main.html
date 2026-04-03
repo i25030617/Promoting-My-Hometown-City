@@ -1,0 +1,587 @@
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9108M3FW09"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9108M3FW09');
+</script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xinxiang Travel Guide</title>
+	
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 全局样式 */
+        *{
+            margin:0 !important;
+            padding:0 !important;
+            box-sizing:border-box !important;
+        }
+        body{
+            font-family: 'Inter', "Microsoft YaHei", sans-serif !important;
+            /* ✅ 全新渐变背景：浅蓝绿渐变，呼应太行山水 */
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%) !important;
+            background-attachment: fixed !important;
+            color:#334155 !important; /* 柔和深灰，不是纯黑 */
+            line-height:1.8 !important;
+            scroll-behavior: smooth !important;
+        }
+        a{
+            text-decoration:none !important;
+            color:inherit !important;
+            cursor: pointer !important;
+        }
+        ul{
+            list-style:none !important;
+        }
+        .container{
+            width:92% !important;
+            max-width:1200px !important;
+            margin:0 auto !important;
+        }
+
+        /* 导航栏样式 */
+        .header{
+            background: rgba(26, 54, 93, 0.95) !important;
+            backdrop-filter: blur(10px) !important;
+            padding:1rem 0 !important;
+            position: fixed !important;
+            top:0 !important;
+            left:0 !important;
+            width:100% !important;
+            z-index:99999 !important;
+            height: 80px !important;
+            border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+        }
+        .nav{
+            width:92% !important;
+            max-width:1200px !important;
+            margin:0 auto !important;
+            display:flex !important;
+            justify-content: space-between !important;
+            align-items:center !important;
+            height:100% !important;
+        }
+        .logo{
+            font-size:2rem !important;
+            font-weight:700 !important;
+            color:#fbbf24 !important; /* 暖金色logo */
+            text-transform:uppercase !important;
+            letter-spacing:2px !important;
+        }
+        .nav-list{
+            display:flex !important;
+            gap:2.5rem !important;
+        }
+        .nav-list a{
+            color:#f8fafc !important;
+            font-size:1.1rem !important;
+            font-weight:500 !important;
+            transition: all 0.3s ease !important;
+            text-transform:capitalize !important;
+            padding: 8px 12px !important;
+            border-radius: 6px !important;
+        }
+        .nav-list a:hover{
+            color:#fbbf24 !important;
+            background: rgba(255,255,255,0.1) !important;
+        }
+
+        /* 横幅样式 */
+        .banner{
+            margin-top:80px !important;
+            height: calc(100vh - 80px) !important;
+            background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("images/xinxiang-banner.jpg") center/cover no-repeat !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
+            color: #fff !important;
+            padding:0 20px !important;
+        }
+        .banner-tag{
+            color:#fbbf24 !important;
+            font-size:1.1rem !important;
+            font-weight:600 !important;
+            margin-bottom:1rem !important;
+            text-transform:uppercase !important;
+            letter-spacing:3px !important;
+        }
+        .banner-title{
+            font-size:3.8rem !important;
+            font-weight:700 !important;
+            color:#fff !important;
+            margin-bottom:1.5rem !important;
+            letter-spacing:2px !important;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
+        }
+        .banner-desc{
+            font-size:1.15rem !important;
+            color:#f1f5f9 !important;
+            opacity:0.95 !important;
+            max-width:800px !important;
+            line-height:1.8 !important;
+            margin-bottom:2.5rem !important;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.2) !important;
+        }
+        .banner-btns{
+            display: flex !important;
+            gap:1.5rem !important;
+        }
+
+        /* 按钮样式 */
+        .btn-discover{
+            display: inline-block !important;
+            padding:16px 40px !important;
+            background:#fbbf24 !important;
+            color:#1e293b !important;
+            border:none !important;
+            border-radius:50px !important;
+            font-size:1rem !important;
+            font-weight:600 !important;
+            cursor:pointer !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3) !important;
+        }
+        .btn-discover:hover{
+            background:#f59e0b !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(251, 191, 36, 0.4) !important;
+        }
+        .btn-back{
+            display: inline-block !important;
+            padding:16px 40px !important;
+            background:transparent !important;
+            color:#fff !important;
+            border:2px solid #fff !important;
+            border-radius:50px !important;
+            font-size:1rem !important;
+            font-weight:600 !important;
+            cursor:pointer !important;
+            transition: all 0.3s ease !important;
+        }
+        .btn-back:hover{
+            background:#fff !important;
+            color:#1e293b !important;
+            transform: translateY(-2px) !important;
+        }
+
+        /* 通用区块样式 */
+        .section{
+            padding:80px 0 !important;
+        }
+        .section-title{
+            text-align:center !important;
+            font-size:32px !important;
+            font-weight:700 !important;
+            margin-bottom:12px !important;
+            position:relative !important;
+            scroll-margin-top: 100px !important;
+            color:#1e293b !important;
+        }
+        .section-title::after{
+            content:"" !important;
+            display:block !important;
+            width:80px !important;
+            height:4px !important;
+            background:linear-gradient(90deg,#fbbf24,#0ea5e9) !important;
+            margin:16px auto !important;
+            border-radius:2px !important;
+        }
+        .section-sub{
+            text-align:center !important;
+            color:#64748b !important;
+            margin-bottom:60px !important;
+            font-size:16px !important;
+            font-weight:400 !important;
+        }
+
+        /* 玻璃态卡片通用样式 */
+        .glass-card{
+            background: rgba(255, 255, 255, 0.7) !important;
+            backdrop-filter: blur(10px) !important;
+            border-radius:16px !important;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.8) !important;
+            overflow:hidden !important;
+            transition: all 0.3s ease !important;
+        }
+        .glass-card:hover{
+            transform:translateY(-8px) !important;
+            box-shadow: 0 12px 40px rgba(31, 38, 135, 0.15) !important;
+        }
+
+        /* 城市概况 */
+        .about-box{
+            display:grid !important;
+            grid-template-columns:1fr 1fr !important;
+            gap:40px !important;
+            align-items:center !important;
+            padding:0 !important;
+        }
+        .about-img img{
+            width:100% !important;
+            border-radius:16px !important;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15) !important;
+        }
+        .about-text{
+            padding:35px !important;
+        }
+        .about-text p{
+            margin-bottom:16px !important;
+            color:#475569 !important;
+            font-size:16px !important;
+        }
+
+        /* 太行风光 */
+        .scenic-grid{
+            display:flex !important;
+            flex-direction:column !important;
+            gap:40px !important;
+        }
+        .scenic-item{
+            display:flex !important;
+            align-items:center !important;
+            gap:0 !important;
+        }
+        .scenic-item img{
+            width:50% !important;
+            height:300px !important;
+            object-fit:cover !important;
+        }
+        .scenic-info{
+            width:50% !important;
+            padding:35px !important;
+        }
+        .scenic-info h3{
+            font-size:22px !important;
+            font-weight:600 !important;
+            margin-bottom:16px !important;
+            color:#1e293b !important;
+        }
+        .scenic-info p{
+            color:#475569 !important;
+            line-height:1.8 !important;
+        }
+        .scenic-item:nth-child(2){
+            flex-direction:row-reverse !important;
+        }
+
+        /* 人文古迹 */
+        .culture-grid{
+            display:grid !important;
+            grid-template-columns:repeat(2,1fr) !important;
+            gap:30px !important;
+        }
+        .culture-item img{
+            width:100% !important;
+            height:220px !important;
+            object-fit:cover !important;
+        }
+        .culture-info{
+            padding:25px !important;
+        }
+        .culture-info h3{
+            font-size:20px !important;
+            font-weight:600 !important;
+            margin-bottom:12px !important;
+            color:#1e293b !important;
+        }
+        .culture-info p{
+            color:#475569 !important;
+        }
+
+        /* 特色美食 */
+        .food-grid{
+            display:grid !important;
+            grid-template-columns:repeat(4,1fr) !important;
+            gap:25px !important;
+        }
+        .food-item{
+            text-align:center !important;
+            padding-bottom:20px !important;
+        }
+        .food-item img{
+            width:100% !important;
+            height:200px !important;
+            object-fit:cover !important;
+        }
+        .food-item h4{
+            font-size:18px !important;
+            font-weight:600 !important;
+            margin:16px 0 8px !important;
+            color:#1e293b !important;
+        }
+        .food-item p{
+            color:#64748b !important;
+            padding:0 15px !important;
+            font-size:14px !important;
+        }
+
+        /* 出行指南 */
+        .guide-flex{
+            display:grid !important;
+            grid-template-columns:repeat(4,1fr) !important;
+            gap:25px !important;
+        }
+        .guide-box{
+            padding:35px 25px !important;
+            text-align:center !important;
+        }
+        .guide-box i{
+            font-size:36px !important;
+            margin-bottom:20px !important;
+            color:#0ea5e9 !important; /* 蓝色图标 */
+        }
+        .guide-box h3{
+            font-size:18px !important;
+            font-weight:600 !important;
+            margin-bottom:12px !important;
+            color:#1e293b !important;
+        }
+        .guide-box p{
+            color:#64748b !important;
+            font-size:14px !important;
+        }
+
+        /* 页脚 */
+        .footer{
+            background: rgba(26, 54, 93, 0.95) !important;
+            backdrop-filter: blur(10px) !important;
+            color:#cbd5e1 !important;
+            text-align:center !important;
+            padding:50px 0 !important;
+            font-size:14px !important;
+            border-top: 1px solid rgba(255,255,255,0.1) !important;
+        }
+
+        /* 响应式 */
+        @media(max-width:992px){
+            .nav-list{
+                gap:1.2rem !important;
+            }
+            .nav-list a{
+                font-size:1rem !important;
+            }
+            .scenic-item{
+                flex-direction:column !important;
+            }
+            .scenic-item img,.scenic-info{
+                width:100% !important;
+            }
+            .scenic-info{
+                padding:25px !important;
+            }
+            .culture-grid,.food-grid,.guide-flex{
+                grid-template-columns:repeat(2,1fr) !important;
+            }
+            .about-box{
+                grid-template-columns:1fr !important;
+            }
+            .banner-title{
+                font-size:2.8rem !important;
+            }
+            .section-title{
+                scroll-margin-top: 90px !important;
+            }
+        }
+        @media(max-width:768px){
+            .nav-list{
+                gap:0.8rem !important;
+            }
+            .logo{
+                font-size:1.5rem !important;
+            }
+            .nav-list a{
+                font-size:0.9rem !important;
+            }
+            .banner-title{
+                font-size:2.2rem !important;
+            }
+            .banner-btns{
+                flex-direction:column !important;
+                gap:15px !important;
+            }
+            .culture-grid,.food-grid,.guide-flex{
+                grid-template-columns:1fr !important;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- 导航栏 -->
+<div class="header">
+    <div class="nav">
+        <div class="logo">XINXIANG</div>
+        <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#scenic">Scenery</a></li>
+            <li><a href="#culture">Historic Sites</a></li>
+            <li><a href="#food">Food</a></li>
+            <li><a href="#guide">Travel Guide</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- 横幅 -->
+<div class="banner" id="top-banner">
+    <div class="banner-tag">NORTHERN CHINA TRAVEL DESTINATION</div>
+    <h1 class="banner-title">Welcome to Xinxiang</h1>
+    <p class="banner-desc">
+        Xinxiang is a vibrant city where majestic Taihang mountains, 3000-year Muye history, traditional culture, and famous local snacks create a unique travel experience.
+    </p>
+    <div class="banner-btns">
+        <a href="#about" class="btn-discover">Discover More</a>
+        <a href="index.html" class="btn-back">Back to Home</a>
+    </div>
+</div>
+
+<!-- 城市概况 -->
+<section class="section about" id="about">
+    <div class="container">
+        <h2 class="section-title">About Xinxiang</h2>
+        <p class="section-sub">Get to know Xinxiang from here</p>
+        <div class="about-box">
+            <div class="about-img">
+                <img src="images/city.jpg" alt="Xinxiang City View">
+            </div>
+            <div class="about-text glass-card">
+                <p>Xinxiang is located in the north of Henan Province, facing the Yellow River to the south and leaning against the Taihang Mountains to the north. It was known as Muye in ancient times and is an important industrial city, transportation hub and cultural city in the Central Plains region.</p>
+                <p>As a famous historical and cultural city, Xinxiang has a long cultural heritage and magnificent Taihang mountain and water resources, making it a city with both historical heritage and natural scenery.</p>
+                <p>From the ancient loyal minister Bigan to the modern Taihang miracle, Xinxiang has always written its own city story with dignity and perseverance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 太行风光 -->
+<section class="section scenic" id="scenic">
+    <div class="container">
+        <h2 class="section-title">Taihang Scenery</h2>
+        <p class="section-sub">Magnificent Taihang, landscape Xinxiang</p>
+        <div class="scenic-grid">
+            <div class="scenic-item glass-card">
+                <img src="images/guoliang.jpg" alt="Guoliang Cliff Road">
+                <div class="scenic-info">
+                    <h3>Guoliang Cliff Road</h3>
+                    <p>Also known as the "Cliff Corridor", it was chiseled by 13 villagers of Guoliang Village with simple tools in the 1970s, hanging on the thousand-foot cliff. It is praised as "the Ninth Wonder of the World" and "the Road of Heroes". The narrow passage, steep rock walls and shocking view outside the cliff make people marvel at the perseverance and courage of the mountain people. Walking through it is like walking in a magical gallery between mountains and clouds.</p>
+                </div>
+            </div>
+            <div class="scenic-item glass-card">
+                <img src="images/baligou.jpg" alt="Baligou Scenic Area">
+                <div class="scenic-info">
+                    <h3>Baligou Scenic Area</h3>
+                    <p>Known as "the Jiangnan of North China" and "the Soul of Taihang", Baligou is famous for its clear waters, waterfalls and green mountains. The scenic area gathers streams, pools, waterfalls and strange peaks, with dense forests and fresh air. In summer, the temperature is pleasant, making it an ideal summer resort. The winding mountain paths, gurgling streams and cascading waterfalls constitute a quiet and beautiful picture, allowing tourists to stay away from the hustle and bustle and return to nature.</p>
+                </div>
+            </div>
+            <div class="scenic-item glass-card">
+                <img src="images/wanxianshan.jpg" alt="Wanxian Mountain">
+                <div class="scenic-info">
+                    <h3>Wanxian Mountain</h3>
+                    <p>As a famous national geological park and a paradise for sketching and hiking, Wanxian Mountain is famous for its magnificent canyons, strange stone peaks and primitive natural scenery. The mountain is steep, the forest is dense, and the clouds are lingering all the year round. There are not only spectacular natural landscapes such as cliff plank roads and alpine meadows, but also rich folk customs. It is a favorite destination for photographers, painters and outdoor enthusiasts to appreciate the majestic momentum of Taihang Mountains.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 人文古迹 -->
+<section class="section culture" id="culture">
+    <div class="container">
+        <h2 class="section-title">Historic Sites</h2>
+        <p class="section-sub">Imprints of Xinxiang in the long river of history</p>
+        <div class="culture-grid">
+            <div class="culture-item glass-card">
+                <img src="images/biganmiao.jpg" alt="Bigan Temple">
+                <div class="culture-info">
+                    <h3>Bigan Temple</h3>
+                    <p>The ancestral home of the Lin family worldwide, the temple of the loyal minister Bigan, preserves many ancient steles and buildings, showing the loyal culture and Chinese roots.</p>
+                </div>
+            </div>
+            <div class="culture-item glass-card">
+                <img src="images/luwangling.jpg" alt="Luwang Mausoleum">
+                <div class="culture-info">
+                    <h3>Luwang Mausoleum</h3>
+                    <p>The largest existing Ming Dynasty vassal mausoleum in the Central Plains, known as the "Central Plains Dingling", with exquisite stone carvings and magnificent momentum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 特色美食 -->
+<section class="section food" id="food">
+    <div class="container">
+        <h2 class="section-title">Local Food</h2>
+        <p class="section-sub">Taste of Central Plains on the tip of the tongue</p>
+        <div class="food-grid">
+            <div class="food-item glass-card">
+                <img src="images/hongmenyangrou.jpg" alt="Braised Lamb in Brown Sauce">
+                <h4>Braised Lamb</h4>
+                <p>Xinxiang signature dish, tender meat, rich soup</p>
+            </div>
+            <div class="food-item glass-card">
+                <img src="images/niuzhongxi.jpg" alt="Niuzhongxi Shaobing">
+                <h4>Niu Zhongxi Sesame Pancake</h4>
+                <p>Intangible cultural heritage, crispy and delicious</p>
+            </div>
+            <div class="food-item glass-card">
+                <img src="images/yanjin.jpg" alt="Yanjin Huoshao">
+                <h4>Yanjin Huoshao</h4>
+                <p>Crispy outside and tender inside, street classic</p>
+            </div>
+            <div class="food-item glass-card">
+                <img src="images/fengqiu.jpg" alt="Fengqiu Roll">
+                <h4>Fengqiu Roll</h4>
+                <p>Egg skin wrapped meat, fresh and tender</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 出行指南 -->
+<section class="section guide" id="guide">
+    <div class="container">
+        <h2 class="section-title">Travel Guide</h2>
+        <p class="section-sub">Easy to travel in Xinxiang</p>
+        <div class="guide-flex">
+            <div class="guide-box glass-card">
+                <i class="fas fa-train"></i>
+                <h3>Transportation</h3>
+                <p>High-speed rail access, convenient buses and taxis in the city, direct buses to scenic spots</p>
+            </div>
+            <div class="guide-box glass-card">
+                <i class="fas fa-calendar"></i>
+                <h3>Best Time</h3>
+                <p>Spring and autumn have the best climate, summer to escape the heat in Taihang, winter to enjoy snow scenery</p>
+            </div>
+            <div class="guide-box glass-card">
+                <i class="fas fa-hotel"></i>
+                <h3>Accommodation</h3>
+                <p>Many hotels in the urban area, farmhouses in mountain areas to experience local customs</p>
+            </div>
+            <div class="guide-box glass-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Tips</h3>
+                <p>Large temperature difference in Taihang mountains, bring a coat; go to local old restaurants for food</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 页脚 -->
+<div class="footer">
+    <div class="container">
+        <p>©2026 Xinxiang Travel Guide · Student Project</p>
+    </div>
+</div>
+</body>
+</html>
