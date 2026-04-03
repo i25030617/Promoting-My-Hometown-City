@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to XinXiang</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            overflow: hidden;
+        }
+        .welcome-container {
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url("images/xinxiang-banner.jpg") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 0.8s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .welcome-card {
+            background: rgba(254, 251, 245, 0.75);
+            backdrop-filter: blur(8px);
+            border-radius: 24px;
+            padding: 55px 85px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+            animation: fadeInUp 1s ease-out 0.3s backwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .card-top {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #555555;
+            margin-bottom: 18px;
+        }
+        .card-title {
+            font-size: clamp(3.2rem, 10vw, 5.5rem);
+            font-weight: bold;
+            color: #1a365d;
+            margin-bottom: 22px;
+            letter-spacing: 1px;
+        }
+        .card-slogan {
+            font-size: 1.15rem;
+            color: #333333;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            white-space: pre-line;
+        }
+        .enter-btn {
+            padding: 12px 40px;
+            background-color: #ffc107;
+            color: #ffffff;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .enter-btn:hover {
+            background-color: #e0a800;
+        }
+        @media (max-width: 768px) {
+            .welcome-card {
+                padding: 35px 45px;
+            }
+            .card-title {
+                font-size: clamp(2.5rem, 12vw, 3.5rem);
+            }
+            .card-slogan {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="welcome-card">
+            <p class="card-top">WELCOME</p >
+            <h1 class="card-title">XinXiang</h1>
+            <p class="card-slogan">
+Three thousand years of Muye history, eight hundred miles of Taihang mountains.
+A miracle on the cliff, authentic Central Plains cuisine.
+Every inch of land holds stories of time.
+            </p >
+            <button class="enter-btn" onclick="window.location.href='main.html'">
+                ENTER
+            </button>
+        </div>
+    </div>
+</body>
+</html>
